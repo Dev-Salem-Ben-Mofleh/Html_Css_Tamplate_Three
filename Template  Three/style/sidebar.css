@@ -1,0 +1,110 @@
+.Sidebar {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0px;
+  background-color: white;
+  width: 220px;
+  justify-content: center;
+  box-shadow: 0 0 10px 2px rgba(185, 184, 184, 0.884);
+}
+
+
+.Sidebar h3 {
+  position: relative;
+  font-weight: bold;
+  text-align: center
+}
+
+.Sidebar h3::before {
+  content: '';
+  position: absolute;
+  width: 46%;
+  height: 2px;
+  background-color: black;
+  bottom: -20px;
+  left: 50px;
+
+}
+
+
+.Sidebar h3::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: black;
+  border: 4px solid white;
+  bottom: -28px;
+  left: 80px;
+}
+
+.Sidebar ul {
+  margin-top: 50px;
+}
+
+.Sidebar ul li {
+  padding: 10px 60px 10px 10px;
+  margin: 5px;
+}
+
+.Sidebar ul .active-1,
+.Sidebar ul li:hover {
+  background-color: #f5f2f2;
+  border-radius: 8px;
+}
+
+
+.Sidebar ul li a {
+  color: black;
+  font-size: 14px;
+}
+
+.Sidebar ul li span {
+  margin-left: 10px;
+}
+
+@media (max-width:767px) {
+  .Sidebar {
+    width: 70px;
+  }
+
+  .Sidebar h3 {
+    font-size: 15px;
+    margin: 10px;
+  }
+
+  .Sidebar h3::after,
+  .Sidebar h3::before,
+  .Sidebar ul li span {
+    display: none;
+  }
+
+  .Sidebar ul {
+    margin-top: 10px;
+  }
+
+  .Sidebar ul li {
+    padding: 12px 10px;
+  }
+
+  .Sidebar ul li a {
+    padding: 8px 10px;
+  }
+
+  .Sidebar ul .active-1,
+  .Sidebar ul li:focus,
+  .Sidebar ul li:hover {
+    background-color: transparent;
+  }
+
+  .Sidebar ul .active-2,
+  .Sidebar ul li a:focus,
+  .Sidebar ul li a:hover {
+    background-color: #f5f2f2;
+    border-radius: 8px;
+  }
+
+}

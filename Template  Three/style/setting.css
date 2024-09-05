@@ -1,0 +1,380 @@
+/* Start Genral */
+main .content .settings-page {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-gap: 20px;
+  margin: 20px;
+}
+
+@media (max-width: 767px) {
+  main .content .settings-page {
+    grid-template-columns: minmax(100px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+
+@media (max-width:767px) {
+  main .content .settings-page {
+    margin-left: 0px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.content .box6,
+.content .box5,
+.content .box4,
+.content .box3,
+.content .box2,
+.content .box1 {
+  border-radius: 10px;
+  background-color: white;
+}
+
+main h1::after {
+  right: 40px;
+}
+
+/* End Genral */
+/* Start Settings Box1 */
+.content .box2,
+.content .box1 {
+  margin-top: 20px;
+
+}
+
+.content .box1 .box-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.content .box1 .box-flex div:nth-child(1) {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.content .box1 div span {
+  display: block;
+}
+
+.content .box1 div p {
+  font-size: 13px;
+  color: var(--grey-color);
+  margin: 5px 0 0;
+}
+
+.toggle-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+.toggle-checkbox:checked+.toggle-switch {
+  background-color: var(--blue-color);
+}
+
+.toggle-checkbox:checked+.toggle-switch::before {
+  content: "\f00c";
+  left: 50px;
+  color: var(--blue-color);
+}
+
+.toggle-switch {
+  background-color: #ccc;
+  width: 78px;
+  height: 32px;
+  border-radius: 16px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.toggle-switch::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00d";
+  font-weight: 900;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.settings-page .close-message {
+  border: 1px solid #ccc;
+  min-height: 150px;
+  width: 90%;
+  margin-left: 20px;
+}
+
+/* End Settings Box1 */
+
+
+/* Start Settings Box2 */
+
+.box2 div {
+  margin-bottom: 10px;
+}
+
+.box2 div label {
+  font-size: 14px;
+  color: var(--grey-color);
+  display: block;
+  margin: 10px 20px 0px
+}
+
+.box2 div input {
+  padding: 10px;
+  border: 1px solid var(--grey-color);
+  border-radius: 6px;
+  width: 92%;
+  margin: 10px 20px 0
+}
+
+.box2 div input[type="email"] {
+  display: inline;
+  width: 75%;
+}
+
+@media (max-width:767px) {
+  .box2 div input {
+    width: 85%;
+  }
+
+  .box2 div input[type="email"] {
+    width: 55%;
+  }
+
+  .content .box2 {
+    margin-top: 0px;
+  }
+
+}
+
+/* End Settings Box2 */
+/* Start Settings Box3 */
+
+.box3 .sec-box {
+  padding-bottom: 15px;
+  margin: 20px 0px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.box3 .sec-box:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  width: 92%;
+  height: 1px;
+  background-color: #eee;
+  bottom: -5px;
+  right: 20px;
+}
+
+.box3 .sec-box div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.box3 .sec-box div p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: var(--grey-color);
+}
+
+.box3 .sec-box a {
+  padding: 5px 10px;
+  background-color: var(--blue-color);
+  color: white;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+/* End Settings Box3 */
+/* Start Settings Box4 */
+
+.box4 .sec-box {
+  display: flex;
+  margin: 0 20px 15px;
+  background-color: #faf7f7;
+  border: 1px solid #d6d4d4;
+
+}
+
+.box4 .sec-box i {
+  padding: 10px;
+  border-right: 1px solid #d6d4d4;
+  width: 35px;
+}
+
+
+.box4 .sec-box input {
+  width: 100%;
+  border: none;
+  background-color: #faf7f7;
+  margin-left: 10px;
+
+}
+
+/* End Settings Box4 */
+/* Start Settings Box5 */
+.box5 .control {
+  margin: 0 0 15px 20px;
+}
+
+.box5 .control input {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.control label {
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.control label::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--grey-color);
+  left: 0px;
+}
+
+.control label::after {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00c";
+  font-weight: 900;
+  background-color: var(--blue-color);
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0) rotate(360deg);
+  transition: 0.3s;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.control input[type="checkbox"]:checked+label::after {
+  transform: scale(1);
+}
+
+/* End Settings Box5 */
+/* Start Settings Box6 */
+.box6 .date {
+  display: flex;
+  align-items: center;
+  margin: 0 0 15px 20px;
+}
+
+.backup-control input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.date label {
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.date label::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: var(--blue-color);
+  border-radius: 50%;
+  transition: 0.3s;
+  transform: scale(0);
+}
+
+.date label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -11px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--grey-color);
+  border-radius: 50%;
+}
+
+.date input[type="radio"]:checked+label::after {
+  transform: scale(1);
+}
+
+.date input[type="radio"]:checked+label::before {
+  border-color: var(--blue-color);
+}
+
+.box6 .servers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 20px;
+  padding-top: 15px;
+}
+
+.box6 .servers .server {
+  width: 100%;
+  border: 2px solid var(--grey-color);
+  border-radius: 6px;
+  position: relative;
+}
+
+.backup-control .servers input[type="radio"]:checked+.server {
+  border-color: var(--blue-color);
+  color: var(--blue-color);
+}
+
+
+.box6 .servers .server label {
+  display: block;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+
+.box6 .servers .server i {
+  display: block;
+  margin-bottom: 10px;
+}
+
+@media (max-width:767px) {
+  .box6 .servers {
+    flex-direction: column;
+  }
+
+  .box6 .servers .server {
+    margin-bottom: 10px;
+  }
+}
+
+/* End Settings Box6 */

@@ -1,0 +1,178 @@
+/* Start Genral */
+main .content .projects-page {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-gap: 20px;
+  margin: 20px;
+}
+
+@media (max-width: 767px) {
+  main .content .projects-page {
+    grid-template-columns: minmax(100px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+
+@media (max-width:767px) {
+  main .content .projects-page {
+    margin-left: 0px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+main h1::after {
+  right: 38px;
+
+}
+
+/* End Genral */
+main .content .projects-page .project:nth-child(1),
+main .content .projects-page .project:nth-child(2) {
+  margin-top: 20px;
+}
+
+.content .project {
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  padding: 20px;
+}
+
+.content .project .date {
+  font-size: 13px;
+  color: var(--grey-color);
+  position: absolute;
+  right: 2%;
+  top: 10px;
+}
+
+
+.content .project h4 {
+  margin: 10px 0;
+  font-weight: normal;
+  position: relative;
+  top: -20px;
+
+}
+
+.content .project p {
+  color: var(--grey-color);
+  margin: 10px 0;
+  position: relative;
+  top: -20px;
+  font-size: 13px;
+
+}
+
+.content .projects-page .team {
+  margin: 20px;
+}
+
+
+.content .projects-page .team:not(:first-child) a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: -20px;
+}
+
+.content .projects-page .do {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+
+}
+
+.content .projects-page .do::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+  top: 0px;
+  right: 0px;
+}
+
+.content .projects-page .do::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+  bottom: 0px;
+  right: 0px;
+}
+
+.content .projects-page .do span {
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background-color: #eee;
+  margin: 20px 2px;
+}
+
+.content .projects-page .info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.content .projects-page .info .prog {
+  flex-basis: 50%;
+  background-color: #eee;
+  height: 8px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.content .projects-page .info .prog span {
+  position: absolute;
+  height: 8px;
+  border-radius: 10px;
+}
+
+.content .projects-page .info .prog .red {
+  background-color: var(--red-color);
+
+}
+
+.content .projects-page .info .prog .blue {
+  background-color: var(--blue-color);
+
+}
+
+.content .projects-page .info .prog .green {
+  background-color: var(--green-color);
+
+}
+
+
+.content .projects-page .info div:last-of-type {
+  font-size: 14px;
+  color: var(--grey-color);
+}
+
+
+@media (max-width:767px) {
+
+  .content .projects-page .do {
+    flex-direction: column;
+  }
+
+  .content .projects-page .do span {
+    width: fit-content;
+    margin: 8px 2px;
+  }
+
+  .content .project .date {
+    top: 2%;
+  }
+
+  main .content .projects-page .project:nth-child(2) {
+    margin-top: 0px;
+  }
+
+}
